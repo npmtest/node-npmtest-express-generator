@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-express-generator/express-generator/bin/express-cli.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-express-generator/node_modules/express-generator/bin/express-cli.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-express-generator">npmtest-express-generator (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-express-generator/express-generator/bin/express-cli.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-express-generator/node_modules/express-generator/bin/express-cli.js</span></h1>
     <h2>
         
         Statements: <span class="metric">27.05% <small>(66 / 244)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-express-generator/express-generator/bin/</a> » express-cli.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-express-generator/node_modules/express-generator/bin/</a> &#187; express-cli.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -1287,24 +1289,24 @@ process.exit = exit
 &nbsp;
 // CLI
 &nbsp;
-around(program, 'optionMissingArgument', <span class="fstat-no" title="function not covered">function (fn, args) {</span>
-<span class="cstat-no" title="statement not covered">  program.outputHelp()</span>
-<span class="cstat-no" title="statement not covered">  fn.apply(this, args)</span>
-<span class="cstat-no" title="statement not covered">  return { args: [], unknown: [] }</span>
+around(program, 'optionMissingArgument', <span class="fstat-no" title="function not covered" >function (fn, args) {</span>
+<span class="cstat-no" title="statement not covered" >  program.outputHelp()</span>
+<span class="cstat-no" title="statement not covered" >  fn.apply(this, args)</span>
+<span class="cstat-no" title="statement not covered" >  return { args: [], unknown: [] }</span>
 })
 &nbsp;
-before(program, 'outputHelp', <span class="fstat-no" title="function not covered">function () {</span>
+before(program, 'outputHelp', <span class="fstat-no" title="function not covered" >function () {</span>
   // track if help was shown for unknown option
-<span class="cstat-no" title="statement not covered">  this._helpShown = true</span>
+<span class="cstat-no" title="statement not covered" >  this._helpShown = true</span>
 })
 &nbsp;
-before(program, 'unknownOption', <span class="fstat-no" title="function not covered">function () {</span>
+before(program, 'unknownOption', <span class="fstat-no" title="function not covered" >function () {</span>
   // allow unknown options if help was shown, to prevent trailing error
-<span class="cstat-no" title="statement not covered">  this._allowUnknownOption = this._helpShown</span>
+<span class="cstat-no" title="statement not covered" >  this._allowUnknownOption = this._helpShown</span>
 &nbsp;
   // show help if not yet shown
-<span class="cstat-no" title="statement not covered">  if (!this._helpShown) {</span>
-<span class="cstat-no" title="statement not covered">    program.outputHelp()</span>
+<span class="cstat-no" title="statement not covered" >  if (!this._helpShown) {</span>
+<span class="cstat-no" title="statement not covered" >    program.outputHelp()</span>
   }
 })
 &nbsp;
@@ -1321,7 +1323,7 @@ program
   .option('-f, --force', 'force on non-empty directory')
   .parse(process.argv)
 &nbsp;
-<span class="missing-if-branch" title="else path not taken">E</span>if (!exit.exited) {
+<span class="missing-if-branch" title="else path not taken" >E</span>if (!exit.exited) {
   main()
 }
 &nbsp;
@@ -1332,10 +1334,10 @@ program
 function around (obj, method, fn) {
   var old = obj[method]
 &nbsp;
-  obj[method] = <span class="fstat-no" title="function not covered">function () {</span>
-<span class="cstat-no" title="statement not covered">    var args = new Array(arguments.length)</span>
-<span class="cstat-no" title="statement not covered">    for (var i = 0; i &lt; args.length; i++) <span class="cstat-no" title="statement not covered">args[i] = arguments[i]</span></span>
-<span class="cstat-no" title="statement not covered">    return fn.call(this, old, args)</span>
+  obj[method] = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >    var args = new Array(arguments.length)</span>
+<span class="cstat-no" title="statement not covered" >    for (var i = 0; i &lt; args.length; i++) <span class="cstat-no" title="statement not covered" >args[i] = arguments[i]</span></span>
+<span class="cstat-no" title="statement not covered" >    return fn.call(this, old, args)</span>
   }
 }
 &nbsp;
@@ -1346,9 +1348,9 @@ function around (obj, method, fn) {
 function before (obj, method, fn) {
   var old = obj[method]
 &nbsp;
-  obj[method] = <span class="fstat-no" title="function not covered">function () {</span>
-<span class="cstat-no" title="statement not covered">    fn.call(this)</span>
-<span class="cstat-no" title="statement not covered">    old.apply(this, arguments)</span>
+  obj[method] = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >    fn.call(this)</span>
+<span class="cstat-no" title="statement not covered" >    old.apply(this, arguments)</span>
   }
 }
 &nbsp;
@@ -1362,9 +1364,9 @@ function confirm (msg, callback) {
     output: process.stdout
   })
 &nbsp;
-  rl.question(msg, <span class="fstat-no" title="function not covered">function (input) {</span>
-<span class="cstat-no" title="statement not covered">    rl.close()</span>
-<span class="cstat-no" title="statement not covered">    callback(/^y|yes|ok|true$/i.test(input))</span>
+  rl.question(msg, <span class="fstat-no" title="function not covered" >function (input) {</span>
+<span class="cstat-no" title="statement not covered" >    rl.close()</span>
+<span class="cstat-no" title="statement not covered" >    callback(/^y|yes|ok|true$/i.test(input))</span>
   })
 }
 &nbsp;
@@ -1372,9 +1374,9 @@ function confirm (msg, callback) {
  * Copy file from template directory.
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function copyTemplate (from, to) {</span>
-<span class="cstat-no" title="statement not covered">  from = path.join(__dirname, '..', 'templates', from)</span>
-<span class="cstat-no" title="statement not covered">  write(to, fs.readFileSync(from, 'utf-8'))</span>
+<span class="fstat-no" title="function not covered" >function copyTemplate (from, to) {</span>
+<span class="cstat-no" title="statement not covered" >  from = path.join(__dirname, '..', 'templates', from)</span>
+<span class="cstat-no" title="statement not covered" >  write(to, fs.readFileSync(from, 'utf-8'))</span>
 }
 &nbsp;
 /**
@@ -1383,153 +1385,153 @@ function confirm (msg, callback) {
  * @param {String} path
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function createApplication (name, path) {</span>
-<span class="cstat-no" title="statement not covered">  var wait = 5</span>
+<span class="fstat-no" title="function not covered" >function createApplication (name, path) {</span>
+<span class="cstat-no" title="statement not covered" >  var wait = 5</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  console.log()</span>
-<span class="fstat-no" title="function not covered">  function complete () {</span>
-<span class="cstat-no" title="statement not covered">    if (--wait) <span class="cstat-no" title="statement not covered">return</span></span>
-<span class="cstat-no" title="statement not covered">    var prompt = launchedFromCmd() ? '&gt;' : '$'</span>
+<span class="cstat-no" title="statement not covered" >  console.log()</span>
+<span class="fstat-no" title="function not covered" >  function complete () {</span>
+<span class="cstat-no" title="statement not covered" >    if (--wait) <span class="cstat-no" title="statement not covered" >return</span></span>
+<span class="cstat-no" title="statement not covered" >    var prompt = launchedFromCmd() ? '&gt;' : '$'</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    console.log()</span>
-<span class="cstat-no" title="statement not covered">    console.log('   install dependencies:')</span>
-<span class="cstat-no" title="statement not covered">    console.log('     %s cd %s &amp;&amp; npm install', prompt, path)</span>
-<span class="cstat-no" title="statement not covered">    console.log()</span>
-<span class="cstat-no" title="statement not covered">    console.log('   run the app:')</span>
+<span class="cstat-no" title="statement not covered" >    console.log()</span>
+<span class="cstat-no" title="statement not covered" >    console.log('   install dependencies:')</span>
+<span class="cstat-no" title="statement not covered" >    console.log('     %s cd %s &amp;&amp; npm install', prompt, path)</span>
+<span class="cstat-no" title="statement not covered" >    console.log()</span>
+<span class="cstat-no" title="statement not covered" >    console.log('   run the app:')</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (launchedFromCmd()) {</span>
-<span class="cstat-no" title="statement not covered">      console.log('     %s SET DEBUG=%s:* &amp; npm start', prompt, name)</span>
+<span class="cstat-no" title="statement not covered" >    if (launchedFromCmd()) {</span>
+<span class="cstat-no" title="statement not covered" >      console.log('     %s SET DEBUG=%s:* &amp; npm start', prompt, name)</span>
     } else {
-<span class="cstat-no" title="statement not covered">      console.log('     %s DEBUG=%s:* npm start', prompt, name)</span>
+<span class="cstat-no" title="statement not covered" >      console.log('     %s DEBUG=%s:* npm start', prompt, name)</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    console.log()</span>
+<span class="cstat-no" title="statement not covered" >    console.log()</span>
   }
 &nbsp;
   // JavaScript
-<span class="cstat-no" title="statement not covered">  var app = loadTemplate('js/app.js')</span>
-<span class="cstat-no" title="statement not covered">  var www = loadTemplate('js/www')</span>
+<span class="cstat-no" title="statement not covered" >  var app = loadTemplate('js/app.js')</span>
+<span class="cstat-no" title="statement not covered" >  var www = loadTemplate('js/www')</span>
 &nbsp;
   // App name
-<span class="cstat-no" title="statement not covered">  www.locals.name = name</span>
+<span class="cstat-no" title="statement not covered" >  www.locals.name = name</span>
 &nbsp;
   // App modules
-<span class="cstat-no" title="statement not covered">  app.locals.modules = Object.create(null)</span>
-<span class="cstat-no" title="statement not covered">  app.locals.uses = []</span>
+<span class="cstat-no" title="statement not covered" >  app.locals.modules = Object.create(null)</span>
+<span class="cstat-no" title="statement not covered" >  app.locals.uses = []</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  mkdir(path, <span class="fstat-no" title="function not covered">function () {</span></span>
-<span class="cstat-no" title="statement not covered">    mkdir(path + '/public', <span class="fstat-no" title="function not covered">function () {</span></span>
-<span class="cstat-no" title="statement not covered">      mkdir(path + '/public/javascripts')</span>
-<span class="cstat-no" title="statement not covered">      mkdir(path + '/public/images')</span>
-<span class="cstat-no" title="statement not covered">      mkdir(path + '/public/stylesheets', <span class="fstat-no" title="function not covered">function () {</span></span>
-<span class="cstat-no" title="statement not covered">        switch (program.css) {</span>
+<span class="cstat-no" title="statement not covered" >  mkdir(path, <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >    mkdir(path + '/public', <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >      mkdir(path + '/public/javascripts')</span>
+<span class="cstat-no" title="statement not covered" >      mkdir(path + '/public/images')</span>
+<span class="cstat-no" title="statement not covered" >      mkdir(path + '/public/stylesheets', <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        switch (program.css) {</span>
           case 'less':
-<span class="cstat-no" title="statement not covered">            copyTemplate('css/style.less', path + '/public/stylesheets/style.less')</span>
-<span class="cstat-no" title="statement not covered">            break</span>
+<span class="cstat-no" title="statement not covered" >            copyTemplate('css/style.less', path + '/public/stylesheets/style.less')</span>
+<span class="cstat-no" title="statement not covered" >            break</span>
           case 'stylus':
-<span class="cstat-no" title="statement not covered">            copyTemplate('css/style.styl', path + '/public/stylesheets/style.styl')</span>
-<span class="cstat-no" title="statement not covered">            break</span>
+<span class="cstat-no" title="statement not covered" >            copyTemplate('css/style.styl', path + '/public/stylesheets/style.styl')</span>
+<span class="cstat-no" title="statement not covered" >            break</span>
           case 'compass':
-<span class="cstat-no" title="statement not covered">            copyTemplate('css/style.scss', path + '/public/stylesheets/style.scss')</span>
-<span class="cstat-no" title="statement not covered">            break</span>
+<span class="cstat-no" title="statement not covered" >            copyTemplate('css/style.scss', path + '/public/stylesheets/style.scss')</span>
+<span class="cstat-no" title="statement not covered" >            break</span>
           case 'sass':
-<span class="cstat-no" title="statement not covered">            copyTemplate('css/style.sass', path + '/public/stylesheets/style.sass')</span>
-<span class="cstat-no" title="statement not covered">            break</span>
+<span class="cstat-no" title="statement not covered" >            copyTemplate('css/style.sass', path + '/public/stylesheets/style.sass')</span>
+<span class="cstat-no" title="statement not covered" >            break</span>
           default:
-<span class="cstat-no" title="statement not covered">            copyTemplate('css/style.css', path + '/public/stylesheets/style.css')</span>
-<span class="cstat-no" title="statement not covered">            break</span>
+<span class="cstat-no" title="statement not covered" >            copyTemplate('css/style.css', path + '/public/stylesheets/style.css')</span>
+<span class="cstat-no" title="statement not covered" >            break</span>
         }
-<span class="cstat-no" title="statement not covered">        complete()</span>
+<span class="cstat-no" title="statement not covered" >        complete()</span>
       })
     })
 &nbsp;
-<span class="cstat-no" title="statement not covered">    mkdir(path + '/routes', <span class="fstat-no" title="function not covered">function () {</span></span>
-<span class="cstat-no" title="statement not covered">      copyTemplate('js/routes/index.js', path + '/routes/index.js')</span>
-<span class="cstat-no" title="statement not covered">      copyTemplate('js/routes/users.js', path + '/routes/users.js')</span>
-<span class="cstat-no" title="statement not covered">      complete()</span>
+<span class="cstat-no" title="statement not covered" >    mkdir(path + '/routes', <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >      copyTemplate('js/routes/index.js', path + '/routes/index.js')</span>
+<span class="cstat-no" title="statement not covered" >      copyTemplate('js/routes/users.js', path + '/routes/users.js')</span>
+<span class="cstat-no" title="statement not covered" >      complete()</span>
     })
 &nbsp;
-<span class="cstat-no" title="statement not covered">    mkdir(path + '/views', <span class="fstat-no" title="function not covered">function () {</span></span>
-<span class="cstat-no" title="statement not covered">      switch (program.view) {</span>
+<span class="cstat-no" title="statement not covered" >    mkdir(path + '/views', <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >      switch (program.view) {</span>
         case 'dust':
-<span class="cstat-no" title="statement not covered">          copyTemplate('dust/index.dust', path + '/views/index.dust')</span>
-<span class="cstat-no" title="statement not covered">          copyTemplate('dust/error.dust', path + '/views/error.dust')</span>
-<span class="cstat-no" title="statement not covered">          break</span>
+<span class="cstat-no" title="statement not covered" >          copyTemplate('dust/index.dust', path + '/views/index.dust')</span>
+<span class="cstat-no" title="statement not covered" >          copyTemplate('dust/error.dust', path + '/views/error.dust')</span>
+<span class="cstat-no" title="statement not covered" >          break</span>
         case 'ejs':
-<span class="cstat-no" title="statement not covered">          copyTemplate('ejs/index.ejs', path + '/views/index.ejs')</span>
-<span class="cstat-no" title="statement not covered">          copyTemplate('ejs/error.ejs', path + '/views/error.ejs')</span>
-<span class="cstat-no" title="statement not covered">          break</span>
+<span class="cstat-no" title="statement not covered" >          copyTemplate('ejs/index.ejs', path + '/views/index.ejs')</span>
+<span class="cstat-no" title="statement not covered" >          copyTemplate('ejs/error.ejs', path + '/views/error.ejs')</span>
+<span class="cstat-no" title="statement not covered" >          break</span>
         case 'jade':
-<span class="cstat-no" title="statement not covered">          copyTemplate('jade/index.jade', path + '/views/index.jade')</span>
-<span class="cstat-no" title="statement not covered">          copyTemplate('jade/layout.jade', path + '/views/layout.jade')</span>
-<span class="cstat-no" title="statement not covered">          copyTemplate('jade/error.jade', path + '/views/error.jade')</span>
-<span class="cstat-no" title="statement not covered">          break</span>
+<span class="cstat-no" title="statement not covered" >          copyTemplate('jade/index.jade', path + '/views/index.jade')</span>
+<span class="cstat-no" title="statement not covered" >          copyTemplate('jade/layout.jade', path + '/views/layout.jade')</span>
+<span class="cstat-no" title="statement not covered" >          copyTemplate('jade/error.jade', path + '/views/error.jade')</span>
+<span class="cstat-no" title="statement not covered" >          break</span>
         case 'hjs':
-<span class="cstat-no" title="statement not covered">          copyTemplate('hogan/index.hjs', path + '/views/index.hjs')</span>
-<span class="cstat-no" title="statement not covered">          copyTemplate('hogan/error.hjs', path + '/views/error.hjs')</span>
-<span class="cstat-no" title="statement not covered">          break</span>
+<span class="cstat-no" title="statement not covered" >          copyTemplate('hogan/index.hjs', path + '/views/index.hjs')</span>
+<span class="cstat-no" title="statement not covered" >          copyTemplate('hogan/error.hjs', path + '/views/error.hjs')</span>
+<span class="cstat-no" title="statement not covered" >          break</span>
         case 'hbs':
-<span class="cstat-no" title="statement not covered">          copyTemplate('hbs/index.hbs', path + '/views/index.hbs')</span>
-<span class="cstat-no" title="statement not covered">          copyTemplate('hbs/layout.hbs', path + '/views/layout.hbs')</span>
-<span class="cstat-no" title="statement not covered">          copyTemplate('hbs/error.hbs', path + '/views/error.hbs')</span>
-<span class="cstat-no" title="statement not covered">          break</span>
+<span class="cstat-no" title="statement not covered" >          copyTemplate('hbs/index.hbs', path + '/views/index.hbs')</span>
+<span class="cstat-no" title="statement not covered" >          copyTemplate('hbs/layout.hbs', path + '/views/layout.hbs')</span>
+<span class="cstat-no" title="statement not covered" >          copyTemplate('hbs/error.hbs', path + '/views/error.hbs')</span>
+<span class="cstat-no" title="statement not covered" >          break</span>
         case 'pug':
-<span class="cstat-no" title="statement not covered">          copyTemplate('pug/index.pug', path + '/views/index.pug')</span>
-<span class="cstat-no" title="statement not covered">          copyTemplate('pug/layout.pug', path + '/views/layout.pug')</span>
-<span class="cstat-no" title="statement not covered">          copyTemplate('pug/error.pug', path + '/views/error.pug')</span>
-<span class="cstat-no" title="statement not covered">          break</span>
+<span class="cstat-no" title="statement not covered" >          copyTemplate('pug/index.pug', path + '/views/index.pug')</span>
+<span class="cstat-no" title="statement not covered" >          copyTemplate('pug/layout.pug', path + '/views/layout.pug')</span>
+<span class="cstat-no" title="statement not covered" >          copyTemplate('pug/error.pug', path + '/views/error.pug')</span>
+<span class="cstat-no" title="statement not covered" >          break</span>
         case 'twig':
-<span class="cstat-no" title="statement not covered">          copyTemplate('twig/index.twig', path + '/views/index.twig')</span>
-<span class="cstat-no" title="statement not covered">          copyTemplate('twig/layout.twig', path + '/views/layout.twig')</span>
-<span class="cstat-no" title="statement not covered">          copyTemplate('twig/error.twig', path + '/views/error.twig')</span>
-<span class="cstat-no" title="statement not covered">          break</span>
+<span class="cstat-no" title="statement not covered" >          copyTemplate('twig/index.twig', path + '/views/index.twig')</span>
+<span class="cstat-no" title="statement not covered" >          copyTemplate('twig/layout.twig', path + '/views/layout.twig')</span>
+<span class="cstat-no" title="statement not covered" >          copyTemplate('twig/error.twig', path + '/views/error.twig')</span>
+<span class="cstat-no" title="statement not covered" >          break</span>
         case 'vash':
-<span class="cstat-no" title="statement not covered">          copyTemplate('vash/index.vash', path + '/views/index.vash')</span>
-<span class="cstat-no" title="statement not covered">          copyTemplate('vash/layout.vash', path + '/views/layout.vash')</span>
-<span class="cstat-no" title="statement not covered">          copyTemplate('vash/error.vash', path + '/views/error.vash')</span>
-<span class="cstat-no" title="statement not covered">          break</span>
+<span class="cstat-no" title="statement not covered" >          copyTemplate('vash/index.vash', path + '/views/index.vash')</span>
+<span class="cstat-no" title="statement not covered" >          copyTemplate('vash/layout.vash', path + '/views/layout.vash')</span>
+<span class="cstat-no" title="statement not covered" >          copyTemplate('vash/error.vash', path + '/views/error.vash')</span>
+<span class="cstat-no" title="statement not covered" >          break</span>
       }
-<span class="cstat-no" title="statement not covered">      complete()</span>
+<span class="cstat-no" title="statement not covered" >      complete()</span>
     })
 &nbsp;
     // CSS Engine support
-<span class="cstat-no" title="statement not covered">    switch (program.css) {</span>
+<span class="cstat-no" title="statement not covered" >    switch (program.css) {</span>
       case 'less':
-<span class="cstat-no" title="statement not covered">        app.locals.modules.lessMiddleware = 'less-middleware'</span>
-<span class="cstat-no" title="statement not covered">        app.locals.uses.push("lessMiddleware(path.join(__dirname, 'public'))")</span>
-<span class="cstat-no" title="statement not covered">        break</span>
+<span class="cstat-no" title="statement not covered" >        app.locals.modules.lessMiddleware = 'less-middleware'</span>
+<span class="cstat-no" title="statement not covered" >        app.locals.uses.push("lessMiddleware(path.join(__dirname, 'public'))")</span>
+<span class="cstat-no" title="statement not covered" >        break</span>
       case 'stylus':
-<span class="cstat-no" title="statement not covered">        app.locals.modules.stylus = 'stylus'</span>
-<span class="cstat-no" title="statement not covered">        app.locals.uses.push("stylus.middleware(path.join(__dirname, 'public'))")</span>
-<span class="cstat-no" title="statement not covered">        break</span>
+<span class="cstat-no" title="statement not covered" >        app.locals.modules.stylus = 'stylus'</span>
+<span class="cstat-no" title="statement not covered" >        app.locals.uses.push("stylus.middleware(path.join(__dirname, 'public'))")</span>
+<span class="cstat-no" title="statement not covered" >        break</span>
       case 'compass':
-<span class="cstat-no" title="statement not covered">        app.locals.modules.compass = 'node-compass'</span>
-<span class="cstat-no" title="statement not covered">        app.locals.uses.push("compass({ mode: 'expanded' })")</span>
-<span class="cstat-no" title="statement not covered">        break</span>
+<span class="cstat-no" title="statement not covered" >        app.locals.modules.compass = 'node-compass'</span>
+<span class="cstat-no" title="statement not covered" >        app.locals.uses.push("compass({ mode: 'expanded' })")</span>
+<span class="cstat-no" title="statement not covered" >        break</span>
       case 'sass':
-<span class="cstat-no" title="statement not covered">        app.locals.modules.sassMiddleware = 'node-sass-middleware'</span>
-<span class="cstat-no" title="statement not covered">        app.locals.uses.push("sassMiddleware({\n  src: path.join(__dirname, 'public'),\n  dest: path.join(__dirname, 'public'),\n  indentedSyntax: true, // true = .sass and false = .scss\n  sourceMap: true\n})")</span>
-<span class="cstat-no" title="statement not covered">        break</span>
+<span class="cstat-no" title="statement not covered" >        app.locals.modules.sassMiddleware = 'node-sass-middleware'</span>
+<span class="cstat-no" title="statement not covered" >        app.locals.uses.push("sassMiddleware({\n  src: path.join(__dirname, 'public'),\n  dest: path.join(__dirname, 'public'),\n  indentedSyntax: true, // true = .sass and false = .scss\n  sourceMap: true\n})")</span>
+<span class="cstat-no" title="statement not covered" >        break</span>
     }
 &nbsp;
     // Template support
-<span class="cstat-no" title="statement not covered">    switch (program.view) {</span>
+<span class="cstat-no" title="statement not covered" >    switch (program.view) {</span>
       case 'dust':
-<span class="cstat-no" title="statement not covered">        app.locals.modules.adaro = 'adaro'</span>
-<span class="cstat-no" title="statement not covered">        app.locals.view = {</span>
+<span class="cstat-no" title="statement not covered" >        app.locals.modules.adaro = 'adaro'</span>
+<span class="cstat-no" title="statement not covered" >        app.locals.view = {</span>
           engine: 'dust',
           render: 'adaro.dust()'
         }
-<span class="cstat-no" title="statement not covered">        break</span>
+<span class="cstat-no" title="statement not covered" >        break</span>
       default:
-<span class="cstat-no" title="statement not covered">        app.locals.view = {</span>
+<span class="cstat-no" title="statement not covered" >        app.locals.view = {</span>
           engine: program.view
         }
-<span class="cstat-no" title="statement not covered">        break</span>
+<span class="cstat-no" title="statement not covered" >        break</span>
     }
 &nbsp;
     // package.json
-<span class="cstat-no" title="statement not covered">    var pkg = {</span>
+<span class="cstat-no" title="statement not covered" >    var pkg = {</span>
       name: name,
       version: '0.0.0',
       private: true,
@@ -1546,65 +1548,65 @@ function confirm (msg, callback) {
       }
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    switch (program.view) {</span>
+<span class="cstat-no" title="statement not covered" >    switch (program.view) {</span>
       case 'dust':
-<span class="cstat-no" title="statement not covered">        pkg.dependencies.adaro = '~1.0.4'</span>
-<span class="cstat-no" title="statement not covered">        break</span>
+<span class="cstat-no" title="statement not covered" >        pkg.dependencies.adaro = '~1.0.4'</span>
+<span class="cstat-no" title="statement not covered" >        break</span>
       case 'jade':
-<span class="cstat-no" title="statement not covered">        pkg.dependencies['jade'] = '~1.11.0'</span>
-<span class="cstat-no" title="statement not covered">        break</span>
+<span class="cstat-no" title="statement not covered" >        pkg.dependencies['jade'] = '~1.11.0'</span>
+<span class="cstat-no" title="statement not covered" >        break</span>
       case 'ejs':
-<span class="cstat-no" title="statement not covered">        pkg.dependencies['ejs'] = '~2.5.6'</span>
-<span class="cstat-no" title="statement not covered">        break</span>
+<span class="cstat-no" title="statement not covered" >        pkg.dependencies['ejs'] = '~2.5.6'</span>
+<span class="cstat-no" title="statement not covered" >        break</span>
       case 'hjs':
-<span class="cstat-no" title="statement not covered">        pkg.dependencies['hjs'] = '~0.0.6'</span>
-<span class="cstat-no" title="statement not covered">        break</span>
+<span class="cstat-no" title="statement not covered" >        pkg.dependencies['hjs'] = '~0.0.6'</span>
+<span class="cstat-no" title="statement not covered" >        break</span>
       case 'hbs':
-<span class="cstat-no" title="statement not covered">        pkg.dependencies['hbs'] = '~4.0.1'</span>
-<span class="cstat-no" title="statement not covered">        break</span>
+<span class="cstat-no" title="statement not covered" >        pkg.dependencies['hbs'] = '~4.0.1'</span>
+<span class="cstat-no" title="statement not covered" >        break</span>
       case 'pug':
-<span class="cstat-no" title="statement not covered">        pkg.dependencies['pug'] = '~2.0.0-beta11'</span>
-<span class="cstat-no" title="statement not covered">        break</span>
+<span class="cstat-no" title="statement not covered" >        pkg.dependencies['pug'] = '~2.0.0-beta11'</span>
+<span class="cstat-no" title="statement not covered" >        break</span>
       case 'twig':
-<span class="cstat-no" title="statement not covered">        pkg.dependencies['twig'] = '~0.10.3'</span>
-<span class="cstat-no" title="statement not covered">        break</span>
+<span class="cstat-no" title="statement not covered" >        pkg.dependencies['twig'] = '~0.10.3'</span>
+<span class="cstat-no" title="statement not covered" >        break</span>
       case 'vash':
-<span class="cstat-no" title="statement not covered">        pkg.dependencies['vash'] = '~0.12.2'</span>
-<span class="cstat-no" title="statement not covered">        break</span>
+<span class="cstat-no" title="statement not covered" >        pkg.dependencies['vash'] = '~0.12.2'</span>
+<span class="cstat-no" title="statement not covered" >        break</span>
     }
 &nbsp;
     // CSS Engine support
-<span class="cstat-no" title="statement not covered">    switch (program.css) {</span>
+<span class="cstat-no" title="statement not covered" >    switch (program.css) {</span>
       case 'less':
-<span class="cstat-no" title="statement not covered">        pkg.dependencies['less-middleware'] = '~2.2.0'</span>
-<span class="cstat-no" title="statement not covered">        break</span>
+<span class="cstat-no" title="statement not covered" >        pkg.dependencies['less-middleware'] = '~2.2.0'</span>
+<span class="cstat-no" title="statement not covered" >        break</span>
       case 'compass':
-<span class="cstat-no" title="statement not covered">        pkg.dependencies['node-compass'] = '0.2.3'</span>
-<span class="cstat-no" title="statement not covered">        break</span>
+<span class="cstat-no" title="statement not covered" >        pkg.dependencies['node-compass'] = '0.2.3'</span>
+<span class="cstat-no" title="statement not covered" >        break</span>
       case 'stylus':
-<span class="cstat-no" title="statement not covered">        pkg.dependencies['stylus'] = '0.54.5'</span>
-<span class="cstat-no" title="statement not covered">        break</span>
+<span class="cstat-no" title="statement not covered" >        pkg.dependencies['stylus'] = '0.54.5'</span>
+<span class="cstat-no" title="statement not covered" >        break</span>
       case 'sass':
-<span class="cstat-no" title="statement not covered">        pkg.dependencies['node-sass-middleware'] = '0.9.8'</span>
-<span class="cstat-no" title="statement not covered">        break</span>
+<span class="cstat-no" title="statement not covered" >        pkg.dependencies['node-sass-middleware'] = '0.9.8'</span>
+<span class="cstat-no" title="statement not covered" >        break</span>
     }
 &nbsp;
     // sort dependencies like npm(1)
-<span class="cstat-no" title="statement not covered">    pkg.dependencies = sortedObject(pkg.dependencies)</span>
+<span class="cstat-no" title="statement not covered" >    pkg.dependencies = sortedObject(pkg.dependencies)</span>
 &nbsp;
     // write files
-<span class="cstat-no" title="statement not covered">    write(path + '/package.json', JSON.stringify(pkg, null, 2) + '\n')</span>
-<span class="cstat-no" title="statement not covered">    write(path + '/app.js', app.render())</span>
-<span class="cstat-no" title="statement not covered">    mkdir(path + '/bin', <span class="fstat-no" title="function not covered">function () {</span></span>
-<span class="cstat-no" title="statement not covered">      write(path + '/bin/www', www.render(), MODE_0755)</span>
-<span class="cstat-no" title="statement not covered">      complete()</span>
+<span class="cstat-no" title="statement not covered" >    write(path + '/package.json', JSON.stringify(pkg, null, 2) + '\n')</span>
+<span class="cstat-no" title="statement not covered" >    write(path + '/app.js', app.render())</span>
+<span class="cstat-no" title="statement not covered" >    mkdir(path + '/bin', <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >      write(path + '/bin/www', www.render(), MODE_0755)</span>
+<span class="cstat-no" title="statement not covered" >      complete()</span>
     })
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (program.git) {</span>
-<span class="cstat-no" title="statement not covered">      copyTemplate('js/gitignore', path + '/.gitignore')</span>
+<span class="cstat-no" title="statement not covered" >    if (program.git) {</span>
+<span class="cstat-no" title="statement not covered" >      copyTemplate('js/gitignore', path + '/.gitignore')</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    complete()</span>
+<span class="cstat-no" title="statement not covered" >    complete()</span>
   })
 }
 &nbsp;
@@ -1630,7 +1632,7 @@ function createAppName (pathName) {
 &nbsp;
 function emptyDirectory (path, fn) {
   fs.readdir(path, function (err, files) {
-    <span class="missing-if-branch" title="if path not taken">I</span>if (err &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered">err.code !== 'ENOENT')</span> <span class="cstat-no" title="statement not covered">throw err</span>
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (err &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >err.code !== 'ENOENT')</span> <span class="cstat-no" title="statement not covered" >throw err</span>
     fn(!files || !files.length)
   })
 }
@@ -1639,34 +1641,34 @@ function emptyDirectory (path, fn) {
  * Graceful exit for async STDIO
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function exit (code) {</span>
+<span class="fstat-no" title="function not covered" >function exit (code) {</span>
   // flush output for Node.js Windows pipe bug
   // https://github.com/joyent/node/issues/6247 is just one bug example
   // https://github.com/visionmedia/mocha/issues/333 has a good discussion
-<span class="fstat-no" title="function not covered">  function done () {</span>
-<span class="cstat-no" title="statement not covered">    if (!(draining--)) <span class="cstat-no" title="statement not covered">_exit(code)</span></span>
+<span class="fstat-no" title="function not covered" >  function done () {</span>
+<span class="cstat-no" title="statement not covered" >    if (!(draining--)) <span class="cstat-no" title="statement not covered" >_exit(code)</span></span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var draining = 0</span>
-<span class="cstat-no" title="statement not covered">  var streams = [process.stdout, process.stderr]</span>
+<span class="cstat-no" title="statement not covered" >  var draining = 0</span>
+<span class="cstat-no" title="statement not covered" >  var streams = [process.stdout, process.stderr]</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  exit.exited = true</span>
+<span class="cstat-no" title="statement not covered" >  exit.exited = true</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  streams.forEach(<span class="fstat-no" title="function not covered">function (stream) {</span></span>
+<span class="cstat-no" title="statement not covered" >  streams.forEach(<span class="fstat-no" title="function not covered" >function (stream) {</span></span>
     // submit empty write request and wait for completion
-<span class="cstat-no" title="statement not covered">    draining += 1</span>
-<span class="cstat-no" title="statement not covered">    stream.write('', done)</span>
+<span class="cstat-no" title="statement not covered" >    draining += 1</span>
+<span class="cstat-no" title="statement not covered" >    stream.write('', done)</span>
   })
 &nbsp;
-<span class="cstat-no" title="statement not covered">  done()</span>
+<span class="cstat-no" title="statement not covered" >  done()</span>
 }
 &nbsp;
 /**
  * Determine if launched from cmd.exe
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function launchedFromCmd () {</span>
-<span class="cstat-no" title="statement not covered">  return process.platform === 'win32' &amp;&amp;</span>
+<span class="fstat-no" title="function not covered" >function launchedFromCmd () {</span>
+<span class="cstat-no" title="statement not covered" >  return process.platform === 'win32' &amp;&amp;</span>
     process.env._ === undefined
 }
 &nbsp;
@@ -1674,15 +1676,15 @@ function emptyDirectory (path, fn) {
  * Load template file.
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function loadTemplate (name) {</span>
-<span class="cstat-no" title="statement not covered">  var contents = fs.readFileSync(path.join(__dirname, '..', 'templates', (name + '.ejs')), 'utf-8')</span>
-<span class="cstat-no" title="statement not covered">  var locals = Object.create(null)</span>
+<span class="fstat-no" title="function not covered" >function loadTemplate (name) {</span>
+<span class="cstat-no" title="statement not covered" >  var contents = fs.readFileSync(path.join(__dirname, '..', 'templates', (name + '.ejs')), 'utf-8')</span>
+<span class="cstat-no" title="statement not covered" >  var locals = Object.create(null)</span>
 &nbsp;
-<span class="fstat-no" title="function not covered">  function render () {</span>
-<span class="cstat-no" title="statement not covered">    return ejs.render(contents, locals)</span>
+<span class="fstat-no" title="function not covered" >  function render () {</span>
+<span class="cstat-no" title="statement not covered" >    return ejs.render(contents, locals)</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return {</span>
+<span class="cstat-no" title="statement not covered" >  return {</span>
     locals: locals,
     render: render
   }
@@ -1697,18 +1699,18 @@ function main () {
   var destinationPath = program.args.shift() || '.'
 &nbsp;
   // App name
-  var appName = createAppName(path.resolve(destinationPath)) || <span class="branch-1 cbranch-no" title="branch not covered">'hello-world'</span>
+  var appName = createAppName(path.resolve(destinationPath)) || <span class="branch-1 cbranch-no" title="branch not covered" >'hello-world'</span>
 &nbsp;
   // View engine
-  <span class="missing-if-branch" title="else path not taken">E</span>if (program.view === undefined) {
-    <span class="missing-if-branch" title="if path not taken">I</span>if (program.ejs) <span class="cstat-no" title="statement not covered">program.view = 'ejs'</span>
-    <span class="missing-if-branch" title="if path not taken">I</span>if (program.hbs) <span class="cstat-no" title="statement not covered">program.view = 'hbs'</span>
-    <span class="missing-if-branch" title="if path not taken">I</span>if (program.hogan) <span class="cstat-no" title="statement not covered">program.view = 'hjs'</span>
-    <span class="missing-if-branch" title="if path not taken">I</span>if (program.pug) <span class="cstat-no" title="statement not covered">program.view = 'pug'</span>
+  <span class="missing-if-branch" title="else path not taken" >E</span>if (program.view === undefined) {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (program.ejs) <span class="cstat-no" title="statement not covered" >program.view = 'ejs'</span>
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (program.hbs) <span class="cstat-no" title="statement not covered" >program.view = 'hbs'</span>
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (program.hogan) <span class="cstat-no" title="statement not covered" >program.view = 'hjs'</span>
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (program.pug) <span class="cstat-no" title="statement not covered" >program.view = 'pug'</span>
   }
 &nbsp;
   // Default view engine
-  <span class="missing-if-branch" title="else path not taken">E</span>if (program.view === undefined) {
+  <span class="missing-if-branch" title="else path not taken" >E</span>if (program.view === undefined) {
     warning('the default view engine will not be jade in future releases\n' +
       "use `--view=jade' or `--help' for additional options")
     program.view = 'jade'
@@ -1716,16 +1718,16 @@ function main () {
 &nbsp;
   // Generate application
   emptyDirectory(destinationPath, function (empty) {
-    <span class="missing-if-branch" title="if path not taken">I</span>if (empty || program.force) {
-<span class="cstat-no" title="statement not covered">      createApplication(appName, destinationPath)</span>
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (empty || program.force) {
+<span class="cstat-no" title="statement not covered" >      createApplication(appName, destinationPath)</span>
     } else {
-      confirm('destination is not empty, continue? [y/N] ', <span class="fstat-no" title="function not covered">function (ok) {</span>
-<span class="cstat-no" title="statement not covered">        if (ok) {</span>
-<span class="cstat-no" title="statement not covered">          process.stdin.destroy()</span>
-<span class="cstat-no" title="statement not covered">          createApplication(appName, destinationPath)</span>
+      confirm('destination is not empty, continue? [y/N] ', <span class="fstat-no" title="function not covered" >function (ok) {</span>
+<span class="cstat-no" title="statement not covered" >        if (ok) {</span>
+<span class="cstat-no" title="statement not covered" >          process.stdin.destroy()</span>
+<span class="cstat-no" title="statement not covered" >          createApplication(appName, destinationPath)</span>
         } else {
-<span class="cstat-no" title="statement not covered">          console.error('aborting')</span>
-<span class="cstat-no" title="statement not covered">          exit(1)</span>
+<span class="cstat-no" title="statement not covered" >          console.error('aborting')</span>
+<span class="cstat-no" title="statement not covered" >          exit(1)</span>
         }
       })
     }
@@ -1739,11 +1741,11 @@ function main () {
  * @param {Function} fn
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function mkdir (path, fn) {</span>
-<span class="cstat-no" title="statement not covered">  mkdirp(path, MODE_0755, <span class="fstat-no" title="function not covered">function (err) {</span></span>
-<span class="cstat-no" title="statement not covered">    if (err) <span class="cstat-no" title="statement not covered">throw err</span></span>
-<span class="cstat-no" title="statement not covered">    console.log('   \x1b[36mcreate\x1b[0m : ' + path)</span>
-<span class="cstat-no" title="statement not covered">    fn &amp;&amp; fn()</span>
+<span class="fstat-no" title="function not covered" >function mkdir (path, fn) {</span>
+<span class="cstat-no" title="statement not covered" >  mkdirp(path, MODE_0755, <span class="fstat-no" title="function not covered" >function (err) {</span></span>
+<span class="cstat-no" title="statement not covered" >    if (err) <span class="cstat-no" title="statement not covered" >throw err</span></span>
+<span class="cstat-no" title="statement not covered" >    console.log('   \x1b[36mcreate\x1b[0m : ' + path)</span>
+<span class="cstat-no" title="statement not covered" >    fn &amp;&amp; fn()</span>
   })
 }
 &nbsp;
@@ -1755,9 +1757,9 @@ function main () {
  */
 &nbsp;
 function renamedOption (originalName, newName) {
-  return <span class="fstat-no" title="function not covered">function (val) {</span>
-<span class="cstat-no" title="statement not covered">    warning(util.format("option `%s' has been renamed to `%s'", originalName, newName))</span>
-<span class="cstat-no" title="statement not covered">    return val</span>
+  return <span class="fstat-no" title="function not covered" >function (val) {</span>
+<span class="cstat-no" title="statement not covered" >    warning(util.format("option `%s' has been renamed to `%s'", originalName, newName))</span>
+<span class="cstat-no" title="statement not covered" >    return val</span>
   }
 }
 &nbsp;
@@ -1782,17 +1784,16 @@ function warning (message) {
  * @param {String} str
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function write (path, str, mode) {</span>
-<span class="cstat-no" title="statement not covered">  fs.writeFileSync(path, str, { mode: mode || MODE_0666 })</span>
-<span class="cstat-no" title="statement not covered">  console.log('   \x1b[36mcreate\x1b[0m : ' + path)</span>
+<span class="fstat-no" title="function not covered" >function write (path, str, mode) {</span>
+<span class="cstat-no" title="statement not covered" >  fs.writeFileSync(path, str, { mode: mode || MODE_0666 })</span>
+<span class="cstat-no" title="statement not covered" >  console.log('   \x1b[36mcreate\x1b[0m : ' + path)</span>
 }
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 11:05:49 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 16:36:05 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
