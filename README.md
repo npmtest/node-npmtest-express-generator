@@ -1,4 +1,7 @@
-# test coverage for  [express-generator (v4.15.0)](https://github.com/expressjs/generator#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-express-generator.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-express-generator) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-express-generator.svg)](https://travis-ci.org/npmtest/node-npmtest-express-generator)
+# npmtest-express-generator
+
+#### basic test coverage for  [express-generator (v4.15.0)](https://github.com/expressjs/generator#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-express-generator.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-express-generator) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-express-generator.svg)](https://travis-ci.org/npmtest/node-npmtest-express-generator)
+
 #### Express' application generator
 
 [![NPM](https://nodei.co/npm/express-generator.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/express-generator)
